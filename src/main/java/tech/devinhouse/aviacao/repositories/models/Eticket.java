@@ -17,8 +17,9 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Eticket {
 	@Id
-	private String eticketId; 
-	private String assento;
+	private String eticketId;
+	@OneToOne
+	private Assento assento;
 	private LocalDate dataHoraConfirmacao;
 	@OneToOne
 	private Passageiro passageiro;
