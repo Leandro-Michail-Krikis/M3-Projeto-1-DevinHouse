@@ -21,7 +21,7 @@ public class Passageiro {
 	@Id
 	private String cpf;
 	private String nome;
-	private LocalDate dataDeNascimento;
+	private LocalDate dataNascimento;
 	@Enumerated(EnumType.STRING)
 	@Builder.Default
 	private CategoriaFidelidadeEnum classificacao = CategoriaFidelidadeEnum.ASSOCIADO;
