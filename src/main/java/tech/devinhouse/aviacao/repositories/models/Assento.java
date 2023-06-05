@@ -1,8 +1,7 @@
 package tech.devinhouse.aviacao.repositories.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,11 +16,12 @@ import lombok.NoArgsConstructor;
 public class Assento {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long assentoId;
+	private String assentoId;
 	private Integer fileira;
 	private String poltrona;
-	
+	@Column(columnDefinition = "boolean default false")
+	private boolean ocupado;
+	private boolean emergencial;
 	@Override
 	public String toString() {
 		return getFileira().toString() + getPoltrona();
