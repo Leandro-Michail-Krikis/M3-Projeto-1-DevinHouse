@@ -2,6 +2,7 @@ package tech.devinhouse.aviacao.controllers.dtos.response;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.Data;
@@ -12,6 +13,7 @@ import tech.devinhouse.aviacao.enums.CategoriaFidelidadeEnum;
 public class PassageiroResponse {
 	private String cpf;
 	private String nome;
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate dataNascimento;
 	private CategoriaFidelidadeEnum classificacao;
 	private Long milhas;

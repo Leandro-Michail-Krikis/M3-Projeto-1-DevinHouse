@@ -19,8 +19,21 @@ public class PassageiroService {
 		return passageiroRepository.findAll();
 	}
 
-	public Optional<Passageiro> findByCpf(String cpf) {
-		return passageiroRepository.findByCpf(cpf);
+	public Optional<Passageiro> findById(String cpf) {
+		return passageiroRepository.findById(cpf);
+	}
+
+	public void atualizaMilhasPassageiro(Passageiro passageiro) {
+		var pontos = 0;
+	    pontos = switch (passageiro.getClassificacao()) {
+		case VIP -> 100;
+		case OURO -> 80;
+		case PRATA -> 50;
+		case BRONZE -> 30;
+		case ASSOCIADO -> 10;
+		};
+	    passageiro.setMilhas(passageiro.getMilhas() + pontos);
+	    passageiroRepository.save(passageiro);
 	}
 	
 }

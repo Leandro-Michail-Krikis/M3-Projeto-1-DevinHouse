@@ -1,6 +1,7 @@
 package tech.devinhouse.aviacao.repositories.models;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -15,12 +16,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Eticket {
+public class CheckIn {
 	@Id
-	private String eticketId;
+	private String eticket;
 	@OneToOne
 	private Assento assento;
-	private LocalDate dataHoraConfirmacao;
+	private LocalDateTime dataHoraConfirmacao;
 	@OneToOne
 	private Passageiro passageiro;
 }

@@ -1,6 +1,7 @@
 package tech.devinhouse.aviacao.repositories.models;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -26,5 +27,11 @@ public class Passageiro {
 	@Builder.Default
 	private CategoriaFidelidadeEnum classificacao = CategoriaFidelidadeEnum.ASSOCIADO;
 	private Integer milhas;
+	
+	public boolean isAdulto() {
+	    return Period.between(this.dataNascimento, LocalDate.now()).getYears() >= 18;
+	}
+
+	
 }
 

@@ -1,6 +1,7 @@
 package tech.devinhouse.aviacao.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,15 @@ public class AssentoService {
 	
 	public List<Assento> findAll(){
 		return assentoRepository.findAll();
+	}
+
+	public Optional<Assento> findById(String id) {
+		return assentoRepository.findById(id);
+	}
+
+	public void marcaAssentoComoOcupado(Assento assento) {
+		assento.setOcupado(true);
+		assentoRepository.save(assento);
 	}
 	
 }

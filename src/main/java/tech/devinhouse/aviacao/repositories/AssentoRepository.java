@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import tech.devinhouse.aviacao.repositories.models.Assento;
 
-public interface AssentoRepository extends CrudRepository<Assento, Long>{
+public interface AssentoRepository extends CrudRepository<Assento, String>{
 	
 	List<Assento> findAll();
 	
