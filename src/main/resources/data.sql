@@ -10,14 +10,14 @@ MERGE INTO PASSAGEIRO (CPF, NOME, DATA_NASCIMENTO, CLASSIFICACAO, MILHAS) VALUES
 ('888.888.888-88', 'Janice Wheeler', '1961-08-07', 'BRONZE', 75),
 ('999.999.999-99', 'Richard Burke', '1945-01-29', 'BRONZE', 50);
 
-INSERT INTO Assento (fileira, poltrona) VALUES
-(1, 'A'), (1, 'B'), (1, 'C'), (1, 'D'), (1, 'E'), (1, 'F'),
-(2, 'A'), (2, 'B'), (2, 'C'), (2, 'D'), (2, 'E'), (2, 'F'),
-(3, 'A'), (3, 'B'), (3, 'C'), (3, 'D'), (3, 'E'), (3, 'F'),
-(4, 'A'), (4, 'B'), (4, 'C'), (4, 'D'), (4, 'E'), (4, 'F'),
-(5, 'A'), (5, 'B'), (5, 'C'), (5, 'D'), (5, 'E'), (5, 'F'),
-(6, 'A'), (6, 'B'), (6, 'C'), (6, 'D'), (6, 'E'), (6, 'F'),
-(7, 'A'), (7, 'B'), (7, 'C'), (7, 'D'), (7, 'E'), (7, 'F'),
-(8, 'A'), (8, 'B'), (8, 'C'), (8, 'D'), (8, 'E'), (8, 'F'),
-(9, 'A'), (9, 'B'), (9, 'C'), (9, 'D'), (9, 'E'), (9, 'F'),
-(10, 'A'), (10, 'B'), (10, 'C'), (10, 'D'), (10, 'E'), (10, 'F');
+MERGE INTO Assento (assento_id, fileira, poltrona, emergencial) VALUES
+('1A', 1, 'A', false), ('1B', 1, 'B', false), ('1C', 1, 'C', false), ('1D', 1, 'D', false), ('1E', 1, 'E', false), ('1F', 1, 'F', false),
+('2A', 2, 'A', false), ('2B', 2, 'B', false), ('2C', 2, 'C', false), ('2D', 2, 'D', false), ('2E', 2, 'E', false), ('2F', 2, 'F', false),
+('3A', 3, 'A', false), ('3B', 3, 'B', false), ('3C', 3, 'C', false), ('3D', 3, 'D', false), ('3E', 3, 'E', false), ('3F', 3, 'F', false),
+('4A', 4, 'A', false), ('4B', 4, 'B', false), ('4C', 4, 'C', false), ('4D', 4, 'D', false), ('4E', 4, 'E', false), ('4F', 4, 'F', false),
+('5A', 5, 'A', true), ('5B', 5, 'B', true), ('5C', 5, 'C', true), ('5D', 5, 'D', true), ('5E', 5, 'E', true), ('5F', 5, 'F', true),
+('6A', 6, 'A', true), ('6B', 6, 'B', true), ('6C', 6, 'C', true), ('6D', 6, 'D', true), ('6E', 6, 'E', true), ('6F', 6, 'F', true),
+('7A', 7, 'A', false), ('7B', 7, 'B', false), ('7C', 7, 'C', false), ('7D', 7, 'D', false), ('7E', 7, 'E', false), ('7F', 7, 'F', false),
+('8A', 8, 'A', false), ('8B', 8, 'B', false), ('8C', 8, 'C', false), ('8D', 8, 'D', false), ('8E', 8, 'E', false), ('8F', 8, 'F', false),
+('9A', 9, 'A', false), ('9B', 9, 'B', false), ('9C', 9, 'C', false), ('9D', 9, 'D', false), ('9E', 9, 'E', false), ('9F', 9, 'F', false),
+('10A', 10, 'A', false), ('10B', 10, 'B', false), ('10C', 10, 'C', false), ('10D', 10, 'D', false), ('10E', 10, 'E', false)
