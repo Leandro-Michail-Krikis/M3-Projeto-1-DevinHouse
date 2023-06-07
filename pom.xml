@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.leandro.dasilva</groupId>
-    <artifactId>m2p2</artifactId>
+    <artifactId>m3p1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>aviacao-api</name>
     <description>API REST do projeto 1 modulo 3</description>
@@ -33,7 +33,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>

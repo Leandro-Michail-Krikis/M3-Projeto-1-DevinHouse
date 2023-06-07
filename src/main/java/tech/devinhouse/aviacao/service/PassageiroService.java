@@ -23,7 +23,7 @@ public class PassageiroService {
 		return passageiroRepository.findById(cpf);
 	}
 
-	public void atualizaMilhasPassageiro(Passageiro passageiro) {
+	public Passageiro atualizaMilhasPassageiro(Passageiro passageiro) {
 		var pontos = 0;
 	    pontos = switch (passageiro.getClassificacao()) {
 		case VIP -> 100;
@@ -33,7 +33,7 @@ public class PassageiroService {
 		case ASSOCIADO -> 10;
 		};
 	    passageiro.setMilhas(passageiro.getMilhas() + pontos);
-	    passageiroRepository.save(passageiro);
+	    return passageiroRepository.save(passageiro);
 	}
 	
 }
