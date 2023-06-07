@@ -20,4 +20,4 @@ MERGE INTO Assento (assento_id, fileira, poltrona, emergencial) VALUES
 ('7A', 7, 'A', false), ('7B', 7, 'B', false), ('7C', 7, 'C', false), ('7D', 7, 'D', false), ('7E', 7, 'E', false), ('7F', 7, 'F', false),
 ('8A', 8, 'A', false), ('8B', 8, 'B', false), ('8C', 8, 'C', false), ('8D', 8, 'D', false), ('8E', 8, 'E', false), ('8F', 8, 'F', false),
 ('9A', 9, 'A', false), ('9B', 9, 'B', false), ('9C', 9, 'C', false), ('9D', 9, 'D', false), ('9E', 9, 'E', false), ('9F', 9, 'F', false),
-('10A', 10, 'A', false), ('10B', 10, 'B', false), ('10C', 10, 'C', false), ('10D', 10, 'D', false), ('10E', 10, 'E', false)
+('10A', 10, 'A', false), ('10B', 10, 'B', false), ('10C', 10, 'C', false), ('10D', 10, 'D', false), ('10E', 10, 'E', false), ('10F', 10, 'F', false)

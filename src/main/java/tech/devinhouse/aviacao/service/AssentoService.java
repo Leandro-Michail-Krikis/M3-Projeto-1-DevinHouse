@@ -23,9 +23,9 @@ public class AssentoService {
 		return assentoRepository.findById(id);
 	}
 
-	public void marcaAssentoComoOcupado(Assento assento) {
+	public Assento marcaAssentoComoOcupado(Assento assento) {
 		assento.setOcupado(true);
-		assentoRepository.save(assento);
+		return assentoRepository.save(assento);
 	}
 	
 }
