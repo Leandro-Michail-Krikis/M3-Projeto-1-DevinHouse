@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(AssentosController.class)
-public class AssentosControllerTest {
+class AssentosControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -31,7 +31,7 @@ public class AssentosControllerTest {
 
     @Test
     @DisplayName("Quando há assentos, deve retornar os assentos")
-    public void getAllTest() throws Exception {
+    void getAllTest() throws Exception {
         Assento assento1 = Assento.builder().assentoId("0TESTE").fileira(0).poltrona("TESTE").build();
         Assento assento2 = Assento.builder().assentoId("1TESTE").fileira(0).poltrona("TESTE").build();
         Assento assento3 = Assento.builder().assentoId("2TESTE").fileira(0).poltrona("TESTE").build();
@@ -45,7 +45,7 @@ public class AssentosControllerTest {
 
     @Test
     @DisplayName("Quando não há assentos, deve retornar um json vazio")
-    public void getAllTest_noresult() throws Exception {
+    void getAllTest_noresult() throws Exception {
 
         List<Assento> assentos = Collections.emptyList();
         when(assentoService.findAll()).thenReturn(assentos);

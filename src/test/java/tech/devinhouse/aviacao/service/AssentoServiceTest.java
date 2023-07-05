@@ -18,7 +18,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class AssentoServiceTest {
+class AssentoServiceTest {
 
     @Mock
     private AssentoRepository assentoRepository;
@@ -38,7 +38,7 @@ public class AssentoServiceTest {
         Assento assento3 = Assento.builder()
                 .assentoId("0TESTE")
                 .build();
-        when(assentoRepository.findAll()).thenReturn(Arrays.asList(assento1, assento2, assento2));
+        when(assentoRepository.findAll()).thenReturn(Arrays.asList(assento1, assento2, assento3));
 
         List<Assento> listaAssentos = assentoService.findAll();
 

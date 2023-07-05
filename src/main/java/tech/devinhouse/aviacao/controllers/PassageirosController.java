@@ -44,7 +44,7 @@ public class PassageirosController {
 	
 	@GetMapping("/{cpf}")
 	public ResponseEntity<PassageiroResponse> getPorCpf(
-												@PathVariable(name = "cpf") String cpf
+            @PathVariable String cpf
 											  ) {
 		var passageiro = passageiroService.findById(cpf)
 										 .orElseThrow(() -> new EntidadeNaoEncontradaException(Map.of("cpf", cpf)));
